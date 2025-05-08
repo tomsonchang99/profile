@@ -100,6 +100,7 @@
       <a href="#home">🏠 首頁</a>
       <a href="#about">🧑‍💼 自我介紹</a>
       <a href="#contact">📞 聯絡方式</a>
+      <a href="#tasting">🍷 品酒天地</a>
       <a href="#portfolio">🎨 作品集</a>
     </nav>
   </header>
@@ -130,7 +131,28 @@
   <a href="泰文-自我介紹.mp3" target="_blank">ภาษาไทย 🎧</a>
 </div>
   
-
+  <section id="tasting">
+    <h2>🍷 品酒天地</h2>
+    </p>
+      <a href="#whisky">🥃 威士忌</a>
+</div>
+      <div id="whisky" style="margin-top: 2rem;">
+  <p>
+    從蒸餾技藝、泥煤風味、橡木桶熟成，到產區特色（如蘇格蘭高地、艾雷島、日本等），我對單一麥芽威士忌有深入研究。
+    喜歡探索不同年份與桶型帶來的風味層次，也樂於與同好分享搭配料理的技巧與心得。
+</nav>
+  <p>
+    威士忌的世界充滿變化，無論是雪莉桶的香甜、波本桶的香草、或泥煤桶的煙燻，每一種風格都值得細細品味。
+    我特別著迷於酒體的變化與餘韻的層次，這也是我常與朋友分享的話題與熱情來源。
+  </p>
+      <a href="#wine">🍇 葡萄酒</a>
+</div>
+    <div id="wine" style="margin-top: 2rem;">
+      <p>
+        熟悉各大產區如波爾多、布根地、納帕、智利等，擅長解讀酒標與年份，並以「香氣－酸度－單寧－酒體」為品評架構。
+        喜歡將紅白酒搭配在宴席、餐酒會或高端招待場景中，增添品飲的文化與情境深度。
+      </p>
+    </div>
   </section>
 
    <section id="portfolio">
@@ -220,44 +242,43 @@
 
   </section>
 
-  <footer>
+ <footer>
     <p>&copy; 2025 Tomson Chang. All rights reserved.</p>
   </footer>
-<script>
-function toggleGallery(id) {
-  const gallery = document.getElementById(id);
-  const isVisible = window.getComputedStyle(gallery).display !== 'none';
-  gallery.style.display = isVisible ? 'none' : 'flex';
-  if (!isVisible) {
-    gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-</script>
 
-<script>
-function showLightbox(src) {
-  const lightbox = document.createElement('div');
-  lightbox.style.position = 'fixed';
-  lightbox.style.top = 0;
-  lightbox.style.left = 0;
-  lightbox.style.width = '100%';
-  lightbox.style.height = '100%';
-  lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
-  lightbox.style.display = 'flex';
-  lightbox.style.alignItems = 'center';
-  lightbox.style.justifyContent = 'center';
-  lightbox.onclick = () => document.body.removeChild(lightbox);
+  <script>
+    function toggleGallery(id) {
+      const gallery = document.getElementById(id);
+      const isVisible = window.getComputedStyle(gallery).display !== 'none';
+      gallery.style.display = isVisible ? 'none' : 'flex';
+      if (!isVisible) {
+        gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
 
-  const img = document.createElement('img');
-  img.src = src;
-  img.style.maxWidth = '90%';
-  img.style.maxHeight = '90%';
-  img.style.borderRadius = '12px';
-  lightbox.appendChild(img);
+    function showLightbox(src) {
+      const lightbox = document.createElement('div');
+      lightbox.style.position = 'fixed';
+      lightbox.style.top = 0;
+      lightbox.style.left = 0;
+      lightbox.style.width = '100%';
+      lightbox.style.height = '100%';
+      lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
+      lightbox.style.display = 'flex';
+      lightbox.style.alignItems = 'center';
+      lightbox.style.justifyContent = 'center';
+      lightbox.onclick = () => document.body.removeChild(lightbox);
 
-  document.body.appendChild(lightbox);
-}
-</script>
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.maxWidth = '90%';
+      img.style.maxHeight = '90%';
+      img.style.borderRadius = '12px';
+      lightbox.appendChild(img);
+
+      document.body.appendChild(lightbox);
+    }
+  </script>
 </body>
 </html>
 
