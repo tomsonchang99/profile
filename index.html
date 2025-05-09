@@ -6,9 +6,6 @@
   <title>章瑞峰 Tomson Chang 的個人網頁</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       font-family: 'Nunito', sans-serif;
       background-color: #f5f9ff;
@@ -35,22 +32,12 @@
       text-decoration: underline;
     }
     section {
-      max-width: 960px;
-      margin: 2rem auto;
       padding: 2rem;
+      margin-bottom: 1rem;
       background-color: white;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    @media screen and (max-width: 600px) {
-      section {
-        margin: 1rem;
-        padding: 1rem;
-      }
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
+      margin: 2rem;
     }
     img {
       display: block;
@@ -149,24 +136,26 @@
   </style>
 </head>
 <body>
-<a id="top"></a>
+
 <header>
-  <h1>章瑞峰 Tomson Chang</h1>
-  <nav>
-    <a href="#top">🏠 首頁</a>
-    <a href="#home">🧑‍💼 自我介紹</a>
-    <a href="#contact">📞 聯絡方式</a>
-    <a href="#tasting">🍷 品酒天地</a>
-    <a href="#portfolio">🎨 作品集</a>
-  </nav>
-</header>
+    <h1>章瑞峰 Tomson Chang</h1>
+    <nav>
+      <a href="#home">🏠 首頁</a>
+      <a href="#about">🧑‍💼 自我介紹</a>
+      <a href="#contact">📞 聯絡方式</a>
+      <a href="#tasting">🍷 品酒天地</a>
+      <a href="#portfolio">🎨 作品集</a>
+    </nav>
+  </header>
 <div style="text-align:center; margin: 20px; font-size: 1.2rem;">
   👀 瀏覽人次：
   <img src="https://hitwebcounter.com/counter/counter.php?page=20605843&style=0005&nbdigits=6&type=page&initCount=0"
        alt="網站瀏覽人次" border="0" />
 </div>
-<section id="home" style="scroll-margin-top: 100px;">
-  <h2>👋 歡迎來到我的個人網頁</h2>
+            
+
+  <section id="home">
+    <h2>👋 歡迎來到我的個人網頁</h2>
     <img src="Tomson2.png" alt="Tomson的大頭貼">
     <p>
       我叫章瑞峰（Tomson Chang），是一位橫跨傳統實戰與數位創新的領航者。三十多年來，我深耕台灣市場，從量販、超市、便利商店到經銷商通路，皆累積豐富操盤經驗。曾在短短五年間帶領團隊，創造營收成長100%的成績，這背後仰賴的不只是策略，更是我對市場的敏銳嗅覺，以及團隊管理與執行力的徹底落實。</p>
@@ -192,9 +181,8 @@ In recent years, I’ve actively expanded into digital content creation—develo
   <a href="泰文語音自我介紹.mp4" target="_blank">ภาษาไทย 🎧</a>
 </div>
   
-    <section id="contact"  style="scroll-margin-top: 100px;">
-  <h2>📞 聯絡方式</h2>
-</section>
+    <section id="contact">
+      <h2>📞 聯絡方式</h2>
       <ul>
         <li>💬 LINE ID：tomson_chang</li>
         <li>📧 Email：tomsonchang99@gmail.com</li>
@@ -208,9 +196,9 @@ In recent years, I’ve actively expanded into digital content creation—develo
       </div>
     </section>
 
-   <section id="tasting" style="scroll-margin-top: 100px;">
-  <h2>🍷 品酒天地</h2>
-  <div>
+   <section id="tasting">
+    <h2>🍷 品酒天地</h2>
+    <div id="wine" style="margin-top: 2rem;">
       <h3>🍇 葡萄酒</h3>
       <p>
         熟悉各大產區如波爾多、布根地、納帕、智利等，擅長解讀酒標與年份，並以「香氣－酸度－單寧－酒體」為品評架構。
@@ -311,24 +299,37 @@ In recent years, I’ve actively expanded into digital content creation—develo
   </script>
 
  </body>
-<section id="portfolio" style="scroll-margin-top: 120px; padding-top: 0.1px;">
+<!-- 這是註解內容 
+  </body>
+   <section id="portfolio">
+    <h2>🗂️ 我的作品集</h2>
+    <nav>
+      <a href="#stickers">🎨 創作貼圖</a>
+      <a href="#games">🕹️ 遊戲</a>
+      <a href="#videos">📹 影音</a>
+      <a href="#moods">📸 心情圖片</a>
+    </nav>
+    <div id="stickers">
+ 這是註解內容 -->
+
+<section id="portfolio">
   <h2>🗂️ 我的作品集</h2>
   <nav>
-     <a href="#stickers-section">🎨 創作貼圖</a>
-    <a href="#games-section">🕹️ 遊戲</a>
-    <a href="#videos-section">📹 影音</a>
-    <a href="#moods-section">📸 心情圖片</a>
+    <a href="#stickers">🎨 創作貼圖</a>
+    <a href="#games">🕹️ 遊戲</a>
+    <a href="#videos">📹 影音</a>
+    <a href="#moods">📸 心情圖片</a>
   </nav>
 
-  <div id="stickers-section" style="scroll-margin-top: 160px; padding-top: 1px;">
-    <h3>🎨 創作貼圖</h3>
-    <div id="stickers">
-      <p>
-     <a href="#" onclick="toggleGallery('brotherT-gallery'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">
+
+  <h3>🎨 創作貼圖</h3>
+   <p>
+ <a href="#" onclick="toggleGallery('brotherT-gallery'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">
   🧑‍🎨 Brother T 系列貼圖
 </a>
-    </p>
-    <div id="brotherT-gallery" style="display: none; flex-wrap: wrap; transition: all 0.4s ease; gap: 1rem; margin-top: 1rem; justify-content: center; cursor: pointer;">
+
+</p>
+  <div id="brotherT-gallery" style="display: none; flex-wrap: wrap; transition: all 0.4s ease; gap: 1rem; margin-top: 1rem; justify-content: center; cursor: pointer;">
   <img src="01.png" width="120" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s;" onclick="showLightbox(this.src)">
   <img src="02.png" width="120" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s;" onclick="showLightbox(this.src)">
   <img src="03.png" width="120" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s;" onclick="showLightbox(this.src)">
@@ -341,10 +342,9 @@ In recent years, I’ve actively expanded into digital content creation—develo
   <img src="010.png" width="120" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s;" onclick="showLightbox(this.src)">
   <img src="011.png" width="120" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s;" onclick="showLightbox(this.src)">
   <img src="012.png" width="120" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s;" onclick="showLightbox(this.src)">
-    </div>
-
- <p>
-      <a href="#" onclick="toggleGallery('brotherT2-gallery'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5;">
+</div>
+  <p>
+     <a href="#" onclick="toggleGallery('brotherT2-gallery'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5;">
     👨‍👩‍👧 Brother T-Family 系列貼圖
   </a>
   </p>
@@ -359,23 +359,22 @@ In recent years, I’ve actively expanded into digital content creation—develo
     <img src="family_emoji_240px_08.png" width="120" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s;" onclick="showLightbox(this.src)">
     <img src="family_emoji_240px_09.png" width="120" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; transition: transform 0.3s;" onclick="showLightbox(this.src)">
   </div>
-  </div>
-
- <div id="games-section" style="scroll-margin-top: 160px; padding-top: 1px;">
-    <h3>🕹️ 遊戲</h3>
+</div>
+</div>
+    <div id="games">
+  <h3>🕹️ 遊戲</h3>
   <p>
     <a href="Game1.html" target="_blank" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5;">
-        ♟️ 點我玩五子棋（AI對戰））
+      ♟️ 點我玩五子棋（AI對戰）
     </a>
   </p>
 </div>
-    <div id="videos-section" style="scroll-margin-top: 160px; padding-top: 1px;">
-    <h3>📹 影音</h3>
+    <div id="videos">
+      <h3>📹 影音</h3>
       <p>（可上傳或嵌入 YouTube/Vimeo 影片）</p>
     </div>
-
-    <div id="moods-section" style="scroll-margin-top: 160px; padding-top: 1px;">
-    <h3>📸 心情圖片</h3>
+    <div id="moods">
+      <h3>📸 心情圖片</h3>
       <p>
         <a href="#" onclick="toggleGallery('moodGallery'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">
         🖼️ 日式卡通風
