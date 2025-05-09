@@ -24,6 +24,8 @@
       position: sticky;
       top: 0;
       z-index: 10;
+      width: 100%; /* 確保 header 占滿整個寬度 */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 加入陰影效果 */
     }
     nav {
       display: flex;
@@ -36,10 +38,10 @@
     }
     nav a {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-direction: row; /* 改為橫向排列圖示與文字 */
+      align-items: center; /* 讓圖示與文字垂直居中 */
       justify-content: center;
-      gap: 0.25rem;
+      gap: 0.5rem; /* 增加圖示與文字之間的間距 */
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -53,6 +55,10 @@
     }
     nav a:hover {
       background: rgba(255, 255, 255, 0.3);
+    }
+    nav a img {
+      width: 40%; /* 圖示縮小 40% */
+      height: auto;
     }
     section {
       max-width: 960px;
@@ -167,6 +173,11 @@
 <body>
 <a id="top"></a>
 <header>
+  <h1>章瑞峰 Tomson Chang 的個人網頁</h1>
+</header>
+</body>
+</html>
+
 <div style="text-align:center; margin: 20px; font-size: 1.2rem;">
   👀 瀏覽人次 : <img src="https://hitwebcounter.com/counter/counter.php?page=20613195&style=0006&nbdigits=5&type=page&initCount=500" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
 </div>
