@@ -25,14 +25,27 @@
       top: 0;
       z-index: 10;
     }
+   nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
     nav a {
-      margin: 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       color: white;
       text-decoration: none;
       font-weight: bold;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      transition: background 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      background: rgba(255, 255, 255, 0.3);
     }
     section {
       max-width: 960px;
@@ -42,15 +55,16 @@
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
-    @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
       section {
         margin: 1rem;
         padding: 1rem;
       }
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
+
     }
     img {
       display: block;
@@ -158,7 +172,7 @@
     <a href="#contact">📞 聯絡方式</a>
     <a href="#tasting">🍷 品酒天地</a>
     <a href="#portfolio">🎨 作品集</a>
-  </nav>
+   </nav>
 </header>
 <div style="text-align:center; margin: 20px; font-size: 1.2rem;">
   👀 瀏覽人次 : <img src="https://hitwebcounter.com/counter/counter.php?page=20613195&style=0006&nbdigits=5&type=page&initCount=500" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
