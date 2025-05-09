@@ -43,7 +43,7 @@
       align-items: center; /* 讓圖示與文字垂直居中 */
       justify-content: center;
       gap: 0.5rem; /* 增加圖示與文字之間的間距 */
-      color: white;
+      color: white; /* 設置文字顏色為白色 */
       text-decoration: none;
       font-weight: bold;
       background: rgba(255, 255, 255, 0.1);
@@ -59,6 +59,8 @@
     }
     nav a i {
       font-size: 1.2rem; /* 設置 Font Awesome icon 的大小 */
+      color: white; /* 設置 icon 顏色為白色 */
+      z-index: 5; /* 確保 icon 在文字上方 */
     }
     section {
       max-width: 960px;
@@ -173,7 +175,7 @@
 <body>
 <a id="top"></a>
 <header>
-  <h1>章瑞峰 Tomson Chang 的個人網頁</h1>
+  <h1>章瑞峰 Tomson Chang</h1>
 </header>
 <nav>
   <a href="#home"><i class="fas fa-home"></i> 首頁</a> <!-- 使用 Font Awesome 圖示 -->
@@ -182,6 +184,7 @@
 </nav>
 </body>
 </html>
+
 
 <div style="text-align:center; margin: 20px; font-size: 1.2rem;">
   👀 瀏覽人次 : <img src="https://hitwebcounter.com/counter/counter.php?page=20613195&style=0006&nbdigits=5&type=page&initCount=500" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
