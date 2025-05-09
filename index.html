@@ -213,10 +213,10 @@ In recent years, I’ve actively expanded into digital content creation—develo
     <p>
       熟悉各大產區如波爾多、布根地、納帕、智利等，擅長解讀酒標與年份，並以「香氣－酸度－單寧－酒體」為品評架構。
       喜歡將紅白酒搭配在宴席、餐酒會或高端招待場景中，增添品飲的文化與情境深度。
-     </p>
-    <h4 onclick="toggleSection('wineSteps', 'wineIcon')" style="cursor: pointer; color: #4f46e5;">
-      🍷 葡萄酒品飲五步驟（The 5 Steps of Wine Tasting） <span id="wineIcon">＋</span>
-    </h4>
+    </p>
+    <p>
+      <a href="#" onclick="toggleSection('wineSteps'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">🍷 葡萄酒品飲四步驟（The 5 Steps of Wine Tasting）</a>
+    </p>
     <div id="wineSteps" class="toggle-section">
         <p><strong>1. 看（Look）—— 觀色，「視覺是品味的前奏，色澤是酒齡與品種的密語。」</strong><br>
         把酒倒入透明杯中，拿至白色背景前，稍微傾斜觀察色澤。<br>
@@ -249,18 +249,18 @@ In recent years, I’ve actively expanded into digital content creation—develo
         不要加冰塊！ 除非你在喝的是超市特價甜白或香檳調飲。<br>
         搭餐原則：紅配肉、白配魚，不過也別太死板，嘴巴說了算。<br>
         記錄下來！ 建議準備一份《葡萄酒品飲筆記表》來養成感官記憶。</p>
-      </div>
+</div>
     </div>
 
-    <div style="margin-top: 2rem;">
-    <h3>🥃 威士忌</h3>
+    <div id="whisky" style="margin-top: 2rem;">
+      <h3>🥃 威士忌</h3>
     <p>
       從蒸餾技藝、泥煤風味、橡木桶熟成，到產區特色（如蘇格蘭高地、艾雷島、日本等），我對單一麥芽威士忌有深入研究。
       喜歡探索不同年份與桶型帶來的風味層次，也樂於與同好分享搭配料理的技巧與心得。
     </p>
-    <h4 onclick="toggleSection('whiskySteps', 'whiskyIcon')" style="cursor: pointer; color: #4f46e5;">
-      🥃 威士忌品飲五步驟（The 5 Steps of Whisky Tasting） <span id="whiskyIcon">＋</span>
-    </h4>
+    <p>
+      <a href="#" onclick="toggleSection('whiskySteps'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">🥃 威士忌品飲五步驟（The 5 Steps of Whisky Tasting）</a>
+    </p>
     <div id="whiskySteps" class="toggle-section">
         <p><strong>1. 觀色（Look）「先用眼睛喝酒，再用舌頭泯酒。」</strong><br>
         把威士忌倒進透明杯中（Glencairn 杯最為理想），放在白底前觀察。<br>
@@ -295,40 +295,17 @@ In recent years, I’ve actively expanded into digital content creation—develo
       </div>
     </div>
   </section>
-  
-<style>
-  .toggle-section {
-    display: none;
-    margin-top: 1rem;
-    background-color: #ffffff;
-    padding: 1.2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    line-height: 1.8;
-    color: #333;
-  }
-  h4:hover {
-    text-decoration: underline;
-  }
-</style>
+  <script>
+    function toggleGallery(id) {
+      const section = document.getElementById(id);
+      const isVisible = section.classList.contains('show');
+      document.querySelectorAll('.toggle-section').forEach(s => s.classList.remove('show'));
+      if (!isVisible) section.classList.add('show');
+    }
+  </script>
 
-<script>
-  function toggleSection(sectionId, iconId) {
-    const section = document.getElementById(sectionId);
-    const icon = document.getElementById(iconId);
-    const isHidden = section.style.display === "none" || section.style.display === "";
-
-    section.style.display = isHidden ? "block" : "none";
-    icon.textContent = isHidden ? "－" : "＋";
-  }
-
-  // 預設隱藏兩區（初始化）
-  document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("wineSteps").style.display = "none";
-    document.getElementById("whiskySteps").style.display = "none";
-  });
-</script>
  </body>
+
 <section id="portfolio" style="scroll-margin-top: 120px; padding-top: 0.1px;">
   <h2>🗂️ 我的作品集</h2>
   <nav>
