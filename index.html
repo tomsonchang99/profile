@@ -86,10 +86,30 @@
       background-color: #e0e7ff;
       color: #555;
     }
+   /* 新增的方形 QR Code 样式 */
+    .qr-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 160px;  /* 固定宽度 */
+      height: 160px; /* 固定高度 */
+    }
+    .qr-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 0;
+    }
   </style>
 </head>
 <body>
-<header>
+  <header>
+
     <h1>章瑞峰 Tomson Chang</h1>
     <nav>
       <a href="#top">🏠 首頁</a>
