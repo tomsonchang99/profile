@@ -25,17 +25,22 @@
       top: 0;
       z-index: 10;
     }
-   nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
       margin-top: 1rem;
+      padding: 0 1rem;
     }
     nav a {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: center;
+      gap: 0.25rem;
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -43,6 +48,7 @@
       padding: 0.5rem 1rem;
       border-radius: 10px;
       transition: background 0.3s;
+      text-align: center;
     }
     nav a:hover {
       background: rgba(255, 255, 255, 0.3);
@@ -55,16 +61,14 @@
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
-@media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
       }
       section {
         margin: 1rem;
         padding: 1rem;
       }
-
     }
     img {
       display: block;
@@ -167,12 +171,12 @@
 <header>
   <h1>章瑞峰 Tomson Chang</h1>
   <nav>
-    <a href="#top">🏠 首頁</a>
-    <a href="#home">🧑‍💼 自我介紹</a>
-    <a href="#contact">📞 聯絡方式</a>
-    <a href="#tasting">🍷 品酒天地</a>
-    <a href="#portfolio">🎨 作品集</a>
-   </nav>
+    <a href="#top">🏠<br>首頁</a>
+    <a href="#home">🧑‍💼<br>自我介紹</a>
+    <a href="#contact">📞<br>聯絡方式</a>
+    <a href="#tasting">🍷<br>品酒天地</a>
+    <a href="#portfolio">🎨<br>作品集</a>
+  </nav>
 </header>
 <div style="text-align:center; margin: 20px; font-size: 1.2rem;">
   👀 瀏覽人次 : <img src="https://hitwebcounter.com/counter/counter.php?page=20613195&style=0006&nbdigits=5&type=page&initCount=500" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
