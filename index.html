@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>章瑞峰 Tomson Chang</title>
+  <title>章瑞峰 Tomson Chang 的個人網頁</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- 引入 Font Awesome -->
   <style>
     html {
       scroll-behavior: smooth;
@@ -18,42 +17,22 @@
       color: #333;
     }
     header {
-      background-color: #4f46e5; /* 與首頁背景色一致 */
+      background-color: #4f46e5;
       color: white;
       padding: 1rem;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
-      width: 100%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      background-color: #4f46e5; /* 設置與 header 相同的顏色 */
-      padding: 0.5rem 1rem; /* 調整內邊距 */
     }
     nav a {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      color: white; /* 設置文字顏色為白色 */
+      margin: 0 1rem;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      padding: 0.3rem 0.6rem;
-      border-radius: 10px;
-      transition: background 0.3s;
-      min-width: 80px;
-      font-size: 1rem;
     }
     nav a:hover {
-      background: rgba(255, 255, 255, 0.3);
+      text-decoration: underline;
     }
     section {
       max-width: 960px;
@@ -62,12 +41,15 @@
       background-color: white;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      scroll-margin-top: 100px; /* 保證滾動到正確位置 */
     }
     @media screen and (max-width: 600px) {
       section {
         margin: 1rem;
         padding: 1rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
       }
     }
     img {
@@ -80,13 +62,69 @@
       color: #4f46e5;
       margin-bottom: 1rem;
     }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "\1F3A5 ";
+    }
+    nav + nav a::before {
+      content: "\1F4C1 ";
+    }
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #e0e7ff;
       color: #555;
     }
-   /* 新增的方形 QR Code 样式 */
+    #portfolio nav a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #c7d2fe;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #1e3a8a;
+    }
+    #portfolio nav a:hover {
+      background-color: #a5b4fc;
+    }
+    .gallery {
+      display: none;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .gallery img {
+      max-width: 20%;
+      height: 20%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .toggle-section {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out, padding 0.3s ease-out;
+    }
+    .toggle-section.show {
+      max-height: 2000px;
+      padding-top: 1rem;
+    }
+    iframe {
+      max-width: 100%;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 12px;
+    }
+    .qr-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
     .qr-box {
       display: flex;
       flex-direction: column;
@@ -96,35 +134,37 @@
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 8px;
-      width: 160px;  /* 固定宽度 */
-      height: 160px; /* 固定高度 */
     }
     .qr-box img {
-      width: 100%;
-      height: 100%;
+      width: 160px;
+      height: 160px;
       object-fit: contain;
       border-radius: 0;
+    }
+    .qr-box span {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <header>
-
-    <h1>章瑞峰 Tomson Chang</h1>
-    <nav>
-      <a href="#top">🏠 首頁</a>
-      <a href="#home" onclick="scrollToSection('home')">🧑‍💼 自我介紹</a>
-      <a href="#contact" onclick="scrollToSection('contact')">📞 聯絡方式</a>
-      <a href="#tasting" onclick="scrollToSection('tasting')">🍷 品酒天地</a>
-      <a href="#portfolio" onclick="scrollToSection('portfolio')">🎨 作品集</a>
-    </nav>
+<a id="top"></a>
+<header>
+  <h1>章瑞峰 Tomson Chang</h1>
+  <nav>
+    <a href="#top">🏠 首頁</a>
+    <a href="#home">🧑‍💼 自我介紹</a>
+    <a href="#contact">📞 聯絡方式</a>
+    <a href="#tasting">🍷 品酒天地</a>
+    <a href="#portfolio">🎨 作品集</a>
+   </nav>
 </header>
-
 <div style="text-align:center; margin: 20px; font-size: 1.2rem;">
   👀 瀏覽人次 : <img src="https://hitwebcounter.com/counter/counter.php?page=20613195&style=0006&nbdigits=5&type=page&initCount=500" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
 </div>
-<section id="home">
-    <h2>👋 歡迎來到我的個人網頁</h2>
+<section id="home" style="scroll-margin-top: 100px;">
+  <h2>👋 歡迎來到我的個人網頁</h2>
     <img src="Tomson3.png" alt="Tomson的大頭貼">
     <p>
       我叫章瑞峰（Tomson Chang），是一位橫跨傳統實戰與數位創新的領航者。三十多年來，我深耕台灣市場，從量販、超市、便利商店到經銷商通路，皆累積豐富操盤經驗。曾在短短五年間帶領團隊，創造營收成長100%的成績，這背後仰賴的不只是策略，更是我對市場的敏銳嗅覺，以及團隊管理與執行力的徹底落實。</p>
@@ -144,16 +184,15 @@ In recent years, I’ve actively expanded into digital content creation—develo
   <a href="中文語音自我介紹.mp4" target="_blank">中文 🎧</a>
   <a href="英文語音自我介紹-new.mp4" target="_blank">English 🎧</a>
   <a href="韓文語音自我介紹.mp4" target="_blank">한국어 🎧</a>
-  <a href="日文語音自我介紹_1.mp4" target="_blank">日本語 🎧</a>
-  <a href="西班牙文語音自我介紹_1.mp4" target="_blank">español 🎧</a>
-  <a href="義大利文語音自我介紹_1-new.mp4" target="_blank">italiano 🎧</a>
+  <a href="日文語音自我介紹.mp4" target="_blank">日本語 🎧</a>
+  <a href="西班牙文語音自我介紹.mp4" target="_blank">español 🎧</a>
+  <a href="義大利文語音自我介紹-new.mp4" target="_blank">italiano 🎧</a>
   <a href="泰文語音自我介紹.mp4" target="_blank">ภาษาไทย 🎧</a>
 </div>
-  </p>
-  </section>
-
-    <section id="contact">
-    <h2>📞 聯絡方式</h2>
+  
+    <section id="contact"  style="scroll-margin-top: 100px;">
+  <h2>📞 聯絡方式</h2>
+</section>
       <ul>
         <li>💬 LINE ID：tomson_chang</li>
         <li>📧 Email：tomsonchang99@gmail.com</li>
@@ -167,17 +206,15 @@ In recent years, I’ve actively expanded into digital content creation—develo
       </div>
 </section>
 
-  <section id="tasting">
-    <h2>🍷 品酒天地</h2>
+  <section id="tasting" style="scroll-margin-top: 100px;">
+  <h2>🍷 品酒天地</h2>
   <div>
     <h3>🍇 葡萄酒</h3>
     <p>
       熟悉各大產區如波爾多、布根地、納帕、智利等，擅長解讀酒標與年份，並以「香氣－酸度－單寧－酒體」為品評架構。
       喜歡將紅白酒搭配在宴席、餐酒會或高端招待場景中，增添品飲的文化與情境深度。
     </p>
-    <p>
-      <a href="#" onclick="toggleSection('wineSteps'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">🍷 葡萄酒品飲四步驟（The 5 Steps of Wine Tasting）</a>
-    </p>
+    <h4 onclick="toggleSection('wineSteps')" style="cursor: pointer; color: #4f46e5;">🍷 葡萄酒品飲五步驟（The 5 Steps of Wine Tasting） <span id="wineIcon">＋</span></h4>
     <div id="wineSteps" class="toggle-section">
         <p><strong>1. 看（Look）—— 觀色，「視覺是品味的前奏，色澤是酒齡與品種的密語。」</strong><br>
         把酒倒入透明杯中，拿至白色背景前，稍微傾斜觀察色澤。<br>
@@ -210,18 +247,17 @@ In recent years, I’ve actively expanded into digital content creation—develo
         不要加冰塊！ 除非你在喝的是超市特價甜白或香檳調飲。<br>
         搭餐原則：紅配肉、白配魚，不過也別太死板，嘴巴說了算。<br>
         記錄下來！ 建議準備一份《葡萄酒品飲筆記表》來養成感官記憶。</p>
-</div>
+      </div>
     </div>
 
     <div id="whisky" style="margin-top: 2rem;">
-      <h3>🥃 威士忌</h3>
+    <h3>🥃 威士忌</h3>
     <p>
       從蒸餾技藝、泥煤風味、橡木桶熟成，到產區特色（如蘇格蘭高地、艾雷島、日本等），我對單一麥芽威士忌有深入研究。
       喜歡探索不同年份與桶型帶來的風味層次，也樂於與同好分享搭配料理的技巧與心得。
     </p>
-    <p>
-      <a href="#" onclick="toggleSection('whiskySteps'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">🥃 威士忌品飲五步驟（The 5 Steps of Whisky Tasting）</a>
-    </p>
+    
+    <h4 onclick="toggleSection('whiskySteps')" style="cursor: pointer; color: #4f46e5;">🥃 威士忌品飲五步驟（The 5 Steps of Whisky Tasting） <span id="whiskyIcon">＋</span></h4>
     <div id="whiskySteps" class="toggle-section">
         <p><strong>1. 觀色（Look）「先用眼睛喝酒，再用舌頭泯酒。」</strong><br>
         把威士忌倒進透明杯中（Glencairn 杯最為理想），放在白底前觀察。<br>
@@ -256,18 +292,37 @@ In recent years, I’ve actively expanded into digital content creation—develo
       </div>
     </div>
   </section>
-  <script>
-    function toggleGallery(id) {
-      const section = document.getElementById(id);
-      const isVisible = section.classList.contains('show');
-      document.querySelectorAll('.toggle-section').forEach(s => s.classList.remove('show'));
-      if (!isVisible) section.classList.add('show');
-    }
-  </script>
+  
+<style>
+  .toggle-section {
+    display: none;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    line-height: 1.8;
+    color: #333;
+  }
+  h4:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+  }
+</style>
 
+<script>
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    const icon = document.getElementById(id === 'wineSteps' ? 'wineIcon' : 'whiskyIcon');
+    const isHidden = section.style.display === "none" || section.style.display === "";
+
+    section.style.display = isHidden ? "block" : "none";
+    icon.textContent = isHidden ? "－" : "＋";
+  }
+</script>
  </body>
- <section id="portfolio">
-    <h2>🗂️ 我的作品集</h2>
+<section id="portfolio" style="scroll-margin-top: 120px; padding-top: 0.1px;">
+  <h2>🗂️ 我的作品集</h2>
   <nav>
     <a href="#stickers-section">🎨 創作貼圖</a>
     <a href="#games-section">🕹️ 遊戲</a>
@@ -364,13 +419,6 @@ In recent years, I’ve actively expanded into digital content creation—develo
   </footer>
 
    </section>
-
-<script>
-    function scrollToSection(id) {
-      const targetSection = document.getElementById(id);
-      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  </script>
 
   <script>
  function toggleSection(id) {
