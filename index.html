@@ -18,15 +18,15 @@
       color: #333;
     }
     header {
-      background-color: #4f46e5;
+      background-color: #4f46e5; /* 與首頁背景色一致 */
       color: white;
       padding: 1rem;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
-      width: 100%; /* 確保 header 占滿整個寬度 */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 加入陰影效果 */
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     nav {
       display: flex;
@@ -34,23 +34,21 @@
       justify-content: center;
       align-items: center;
       gap: 1rem;
-      margin-top: 1rem;
-      padding: 0 1rem;
+      background-color: #4f46e5; /* 設置與 header 相同的顏色 */
+      padding: 0.5rem 1rem; /* 調整內邊距 */
     }
     nav a {
       display: flex;
-      flex-direction: row; /* 改為橫向排列圖示與文字 */
-      align-items: center; /* 讓圖示與文字垂直居中 */
+      flex-direction: row;
+      align-items: center;
       justify-content: center;
-      gap: 0.5rem; /* 增加圖示與文字之間的間距 */
+      gap: 0.5rem;
       color: white; /* 設置文字顏色為白色 */
       text-decoration: none;
       font-weight: bold;
-      background: rgba(255, 255, 255, 0.1);
       padding: 0.3rem 0.6rem;
       border-radius: 10px;
       transition: background 0.3s;
-      text-align: center;
       min-width: 80px;
       font-size: 0.8rem;
     }
@@ -59,8 +57,7 @@
     }
     nav a i {
       font-size: 1.2rem; /* 設置 Font Awesome icon 的大小 */
-      color: blue; /* 設置 icon 顏色為藍色 */
-      z-index: 5; /* 確保 icon 在文字上方 */
+      color: white; /* 設置 icon 顏色為白色 */
     }
     section {
       max-width: 960px;
@@ -178,9 +175,11 @@
   <h1>章瑞峰 Tomson Chang</h1>
 </header>
 <nav>
-  <a href="#home"><i class="fas fa-home"></i> 首頁</a> <!-- 使用 Font Awesome 圖示 -->
+  <a href="#home"><i class="fas fa-home"></i> 首頁</a>
+  <a href="#home">🧑‍💼 自我介紹</a>
+  <a href="#contact">📞 聯絡方式</a>
+  <a href="#tasting">🍷 品酒天地</a>
   <a href="#portfolio"><i class="fas fa-briefcase"></i> 作品集</a>
-  <a href="#about"><i class="fas fa-user"></i> 關於我</a>
 </nav>
 </body>
 </html>
