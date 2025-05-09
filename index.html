@@ -55,10 +55,6 @@
     nav a:hover {
       background: rgba(255, 255, 255, 0.3);
     }
-    nav a i {
-      font-size: 1.2rem; /* 設置 Font Awesome icon 的大小 */
-      color: white; /* 設置 icon 顏色為白色 */
-    }
     section {
       max-width: 960px;
       margin: 2rem auto;
@@ -66,6 +62,7 @@
       background-color: white;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      scroll-margin-top: 100px; /* 保證滾動到正確位置 */
     }
     @media screen and (max-width: 600px) {
       section {
@@ -83,114 +80,31 @@
       color: #4f46e5;
       margin-bottom: 1rem;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li::before {
-      content: "\1F3A5 ";
-    }
-    nav + nav a::before {
-      content: "\1F4C1 ";
-    }
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #e0e7ff;
       color: #555;
     }
-    #portfolio nav a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #c7d2fe;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #1e3a8a;
-    }
-    #portfolio nav a:hover {
-      background-color: #a5b4fc;
-    }
-    .gallery {
-      display: none;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-      justify-content: center;
-      cursor: pointer;
-    }
-    .gallery img {
-      max-width: 20%;
-      height: 20%;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-    .toggle-section {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease-out, padding 0.3s ease-out;
-    }
-    .toggle-section.show {
-      max-height: 2000px;
-      padding-top: 1rem;
-    }
-    iframe {
-      max-width: 100%;
-      display: block;
-      margin: 2rem auto;
-      border-radius: 12px;
-    }
-    .qr-container {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    .qr-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #fff;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .qr-box img {
-      width: 160px;
-      height: 160px;
-      object-fit: contain;
-      border-radius: 0;
-    }
-    .qr-box span {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
-<a id="top"></a>
 <header>
-  <h1>章瑞峰 Tomson Chang</h1>
-  <nav>
-  <a href="#top">🏠 首頁</a>
-  <a href="#home">🧑‍💼 自我介紹</a>
-  <a href="#contact">📞 聯絡方式</a>
-  <a href="#tasting">🍷 品酒天地</a>
-  <a href="#portfolio">🎨 作品集</a>
-</nav>
+    <h1>章瑞峰 Tomson Chang</h1>
+    <nav>
+      <a href="#top">🏠 首頁</a>
+      <a href="#home" onclick="scrollToSection('home')">🧑‍💼 自我介紹</a>
+      <a href="#contact" onclick="scrollToSection('contact')">📞 聯絡方式</a>
+      <a href="#tasting" onclick="scrollToSection('tasting')">🍷 品酒天地</a>
+      <a href="#portfolio" onclick="scrollToSection('portfolio')">🎨 作品集</a>
+    </nav>
 </header>
-
-</body>
-</html>
-
 
 <div style="text-align:center; margin: 20px; font-size: 1.2rem;">
   👀 瀏覽人次 : <img src="https://hitwebcounter.com/counter/counter.php?page=20613195&style=0006&nbdigits=5&type=page&initCount=500" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
 </div>
-<section id="home" style="scroll-margin-top: 100px;">
-  <h2>👋 歡迎來到我的個人網頁</h2>
+<section id="home">
+    <h2>👋 歡迎來到我的個人網頁</h2>
     <img src="Tomson3.png" alt="Tomson的大頭貼">
     <p>
       我叫章瑞峰（Tomson Chang），是一位橫跨傳統實戰與數位創新的領航者。三十多年來，我深耕台灣市場，從量販、超市、便利商店到經銷商通路，皆累積豐富操盤經驗。曾在短短五年間帶領團隊，創造營收成長100%的成績，這背後仰賴的不只是策略，更是我對市場的敏銳嗅覺，以及團隊管理與執行力的徹底落實。</p>
@@ -215,10 +129,11 @@ In recent years, I’ve actively expanded into digital content creation—develo
   <a href="義大利文語音自我介紹-new.mp4" target="_blank">italiano 🎧</a>
   <a href="泰文語音自我介紹.mp4" target="_blank">ภาษาไทย 🎧</a>
 </div>
-  
-    <section id="contact"  style="scroll-margin-top: 100px;">
-  <h2>📞 聯絡方式</h2>
-</section>
+  </p>
+  </section>
+
+    <section id="contact">
+    <h2>📞 聯絡方式</h2>
       <ul>
         <li>💬 LINE ID：tomson_chang</li>
         <li>📧 Email：tomsonchang99@gmail.com</li>
@@ -232,8 +147,8 @@ In recent years, I’ve actively expanded into digital content creation—develo
       </div>
 </section>
 
-  <section id="tasting" style="scroll-margin-top: 100px;">
-  <h2>🍷 品酒天地</h2>
+  <section id="tasting">
+    <h2>🍷 品酒天地</h2>
   <div>
     <h3>🍇 葡萄酒</h3>
     <p>
@@ -331,8 +246,8 @@ In recent years, I’ve actively expanded into digital content creation—develo
   </script>
 
  </body>
-<section id="portfolio" style="scroll-margin-top: 120px; padding-top: 0.1px;">
-  <h2>🗂️ 我的作品集</h2>
+ <section id="portfolio">
+    <h2>🗂️ 我的作品集</h2>
   <nav>
     <a href="#stickers-section">🎨 創作貼圖</a>
     <a href="#games-section">🕹️ 遊戲</a>
@@ -429,6 +344,13 @@ In recent years, I’ve actively expanded into digital content creation—develo
   </footer>
 
    </section>
+
+<script>
+    function scrollToSection(id) {
+      const targetSection = document.getElementById(id);
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
 
   <script>
  function toggleSection(id) {
