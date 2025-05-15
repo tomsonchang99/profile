@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>章瑞峰 Tomson Chang 的個人網頁</title>
+  <title>章瑞峰 Tomson Chang</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- 引入 Font Awesome -->
   <style>
     html {
       scroll-behavior: smooth;
@@ -17,22 +18,46 @@
       color: #333;
     }
     header {
-      background-color: #4f46e5;
+      background-color: #4f46e5; /* 與首頁背景色一致 */
       color: white;
       padding: 1rem;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background-color: #4f46e5; /* 設置與 header 相同的顏色 */
+      padding: 0.5rem 1rem; /* 調整內邊距 */
     }
     nav a {
-      margin: 0 1rem;
-      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: white; /* 設置文字顏色為白色 */
       text-decoration: none;
       font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      border-radius: 10px;
+      transition: background 0.3s;
+      min-width: 80px;
+      font-size: 1rem;
     }
     nav a:hover {
-      text-decoration: underline;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    nav a i {
+      font-size: 1.2rem; /* 設置 Font Awesome icon 的大小 */
+      color: white; /* 設置 icon 顏色為白色 */
     }
     section {
       max-width: 960px;
@@ -46,10 +71,6 @@
       section {
         margin: 1rem;
         padding: 1rem;
-      }
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
       }
     }
     img {
@@ -163,7 +184,8 @@
 <div style="text-align:center; margin: 20px; font-size: 1.2rem;">
   👀 瀏覽人次 : <img src="https://hitwebcounter.com/counter/counter.php?page=20613195&style=0006&nbdigits=5&type=page&initCount=500" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
 </div>
-<section id="home" style="scroll-margin-top: 100px;">
+<section id="home" style="scroll-margin-top: 150px;">
+<a name="home"></a>
   <h2>👋 歡迎來到我的個人網頁</h2>
     <img src="Tomson3.png" alt="Tomson的大頭貼">
     <p>
@@ -190,7 +212,7 @@ In recent years, I’ve actively expanded into digital content creation—develo
   <a href="泰文語音自我介紹.mp4" target="_blank">ภาษาไทย 🎧</a>
 </div>
   
-    <section id="contact"  style="scroll-margin-top: 100px;">
+    <section id="contact"  style="scroll-margin-top: 150px;">
   <h2>📞 聯絡方式</h2>
 </section>
       <ul>
@@ -206,7 +228,7 @@ In recent years, I’ve actively expanded into digital content creation—develo
       </div>
 </section>
 
-  <section id="tasting" style="scroll-margin-top: 100px;">
+  <section id="tasting" style="scroll-margin-top: 150px;">
   <h2>🍷 品酒天地</h2>
   <div>
     <h3>🍇 葡萄酒</h3>
@@ -248,20 +270,93 @@ In recent years, I’ve actively expanded into digital content creation—develo
         建議溫度：白酒：8～12°C、紅酒：15～18°C<br>
         不要加冰塊！ 除非你在喝的是超市特價甜白或香檳調飲。<br>
         搭餐原則：紅配肉、白配魚，不過也別太死板，嘴巴說了算。<br>
-        記錄下來！ 建議準備一份《葡萄酒品飲筆記表》來養成感官記憶。</p>
+        記錄下來！ 建議準備一份《葡萄酒品飲筆記表》白肉（雞、豬、鴨） → Pinot Noir 或中等酒體的白酒如 Chardonnay。來養成感官記憶。</p>
+</div>
+    <p>
+    <a href="#" onclick="toggleSection('wineGuide'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5;">🍷 專業品酒師教你選葡萄酒</a>
+  </p>
+  <div id="wineGuide" class="toggle-section">
+    <p><strong>1️⃣ 根據【場合】選擇最合適的酒款</strong></p>
+    <ul>
+      <li>✔️ 紅肉（牛排、燒烤） → 單寧高的紅酒如 Cabernet Sauvignon、Syrah。</li>
+      <li>✔️ 白肉 → Pinot Noir、Chardonnay</li>
+      <li>✔️ 海鮮（魚貝、壽司） → 酸度高、清爽的 Sauvignon Blanc、Muscadet。</li>
+      <li>✔️ 獨飲、聊天小酌 → 選擇果香明顯、酒體中等的品種，如 Merlot、Pinot Grigio、微甜的 Riesling，入口輕鬆又有層次。</li>
+      <li>✔️ 送禮或商務用途 → 建議挑選來自名莊或知名產區（如：波爾多列級、義大利 Super Tuscan），品牌形象佳，能彰顯品味與誠意。</li>
+    </ul>
+    <p><strong>2️⃣ 評估【產區特色】（Terroir ≠ 地名那麼簡單）</strong><br>
+     <ul>
+     <li>✔️ 舊世界（Old World） 🇫🇷🇮🇹🇪🇸，強調「風土」與「傳統釀法」，酒風通常偏酸、輕巧、有礦感與層次。<br>
+            例如：布根地的 Pinot Noir、義大利巴羅洛的 Nebbiolo，都是細膩派代表。</li>
+     <li>✔️ 新世界（New World） 🇺🇸🇨🇱🇦🇺🇳🇿 更自由奔放，果香濃郁、酒體飽滿，適合大眾口味。<br>
+    例如：加州的 Zinfandel、智利的 Carmenère，甜美而直率。</li>
+    <ul>
+    <p><strong>3️⃣ 葡萄品種特性</strong><br>
+    🍇 Cabernet Sauvignon：單寧高、結構強，常見於高級紅酒。適合搭配牛排。<br>
+    🍇 Merlot：柔順、圓潤、果味濃，是初學者最安全的選擇。<br>
+    🍇 Pinot Noir：酒體輕盈但細緻，常帶莓果與泥土香氣，搭餐萬用。<br>
+    🍇 Syrah/Shiraz：濃郁香料感，口感厚重，適合重口味料理。<br>
+         🍇 Chardonnay：視產區風格差異大，從清爽到奶油感都有。<br>
+    🍇 Sauvignon Blanc：清爽高酸，帶青草、柑橘香，是夏天與海鮮好搭檔。<br>
+    🍇 Riesling：有乾型也有甜型，果香豐富、酸甜平衡。</p>
+
+    <p><strong>4️⃣解讀【年份】（Vintage）背後的意義
+酒的「年份」= 葡萄收成年</strong><br>
+    ✔️ 舊世界酒款對氣候波動敏感，不同年份差異可能極大。<br>
+         ✔️ 新世界酒較穩定，年份差異不如舊世界明顯。<br>
+         ✔️ 年份參考建議：<br>
+               📅 1-3 年 → 年輕、果香主導，適合即飲。<br>
+               📅 4-7 年 → 開始展現熟成風味，口感更圓潤。<br>
+               📅 8 年以上 → 陳年酒，展現皮革、菇類、雪茄盒等複雜香氣（不建議新手貿然嘗試）。</p>
+
+<p><strong>5️⃣ 解讀酒標: 酒名 + 產區 + 品種 + 酒精濃度 + 酒莊名稱</strong><br>
+         注意是否有：<br>
+    ✔️ AOC / DOCG / DOC / Reserva → 品質等級認證<br>
+         ✔️酒評分數（Robert Parker、Wine Spectator 等）→ 分數通常 90 以上才值得留意</p>
+📌 法國酒常不標品種，要從產區推敲（例如波爾多多是 Cabernet/Merlot）。</p>
+
+    <p><strong>6️⃣ 根據【預算】找到 CP 值高的選擇</strong></p>
+    <table border="1" cellpadding="4" style="border-collapse: collapse; width: 100%;">
+      <tr><th>價位區間</th><th>建議選擇</th><th>適合場合</th></tr>
+      <tr><td>NT$300–600</td><td>新世界入門酒款</td><td>日常餐搭／聚會</td></tr>
+      <tr><td>NT$600–1500</td><td>優質酒莊代表作</td><td>品酒、聚餐、送禮</td></tr>
+      <tr><td>NT$1500+</td><td>名莊酒、高分年份酒款</td><td>收藏、紀念日</td></tr>
+    </table>
+    <p><strong>7️⃣ 靈活運用【數位工具】</strong><br>
+    ✔️Vivino：掃酒標查評價、價格、配餐建議。<br>
+    ✔️Wine-Searcher：查找世界各地價格與年份評分。</p>
+    
+<p><strong>8️⃣ 別怕試錯，勇敢【品飲體驗】</strong><br>
+    ✔️參加超市、餐廳、葡萄酒專賣店的試飲活動。<br>
+    ✔️養成個人口感筆記</p>
+  </div>
+</section>
+
+<script>
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    const all = document.querySelectorAll('.toggle-section');
+    all.forEach(s => {
+      if (s !== section) s.classList.remove('show');
+    });
+    section.classList.toggle('show');
+  }
+</script>
 </div>
     </div>
 
-    <div id="whisky" style="margin-top: 2rem;">
+    <section id="whisky" style="scroll-margin-top: 100px;">
       <h3>🥃 威士忌</h3>
     <p>
       從蒸餾技藝、泥煤風味、橡木桶熟成，到產區特色（如蘇格蘭高地、艾雷島、日本等），我對單一麥芽威士忌有深入研究。
       喜歡探索不同年份與桶型帶來的風味層次，也樂於與同好分享搭配料理的技巧與心得。
     </p>
     <p>
-      <a href="#" onclick="toggleSection('whiskySteps'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">🥃 威士忌品飲五步驟（The 5 Steps of Whisky Tasting）</a>
-    </p>
-    <div id="whiskySteps" class="toggle-section">
+      <a href="#" onclick="toggleSection('whiskySteps'); return false;" style="font-size: 1.2rem; text-decoration: none; color: #4f46e5; display: inline-block;">
+      🥃 威士忌品飲五步驟（The 5 Steps of Whisky Tasting）
+</a>
+  </p>
+  <div id="whiskySteps" class="toggle-section">
         <p><strong>1. 觀色（Look）「先用眼睛喝酒，再用舌頭泯酒。」</strong><br>
         把威士忌倒進透明杯中（Glencairn 杯最為理想），放在白底前觀察。<br>
         顏色範圍從淡金、琥珀到深銅紅，可反映桶型（如波本桶或雪莉桶）與年份。<br>
@@ -306,7 +401,7 @@ In recent years, I’ve actively expanded into digital content creation—develo
 
  </body>
 
-<section id="portfolio" style="scroll-margin-top: 120px; padding-top: 0.1px;">
+<section id="portfolio" style="scroll-margin-top: 170px; padding-top: 0.1px;">
   <h2>🗂️ 我的作品集</h2>
   <nav>
     <a href="#stickers-section">🎨 創作貼圖</a>
